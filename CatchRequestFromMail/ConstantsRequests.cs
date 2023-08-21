@@ -4,7 +4,7 @@ using System.Text;
 
 namespace CatchRequestFromMail
 {
-    public static class Constants
+    public static class ConstantsRequests
     {
         public static string GetUnderMinCountProducts = " 5 in altında kalan ürünleri getir.";
         public static string GetOverTheCountProducts = " 5 in üstünde kalan ürünleri getir.";

@@ -33,7 +33,7 @@ namespace CatchRequestFromMail
             string resultRequestMessage =  GetLastEmailRequestMessage();
             
 
-            if(resultRequest == Constants.GetAllProductByCategoryId)
+            if(resultRequest == ConstantsRequests.GetAllProductByCategoryId)
             {
                 int categoryID = GetNumber(resultRequestMessage);
                 var resultListData = _productService.GetAllByCategoryId(categoryID).Data;
@@ -46,7 +46,7 @@ namespace CatchRequestFromMail
                 return dataResult;
 
             }
-            else if (resultRequest == Constants.GetUnderMinCountProducts)
+            else if (resultRequest == ConstantsRequests.GetUnderMinCountProducts)
             {
                 int min = GetNumber(resultRequestMessage);
                 var resultListData = _productService.GetByUnitsInStock((decimal)0, (decimal)min).Data;
@@ -58,7 +58,7 @@ namespace CatchRequestFromMail
                 //string json = JsonConvert.SerializeObject(resultListData, Formatting.Indented);
                 return dataResult;
             }
-            else if (resultRequest == Constants.GetOverTheCountProducts)
+            else if (resultRequest == ConstantsRequests.GetOverTheCountProducts)
             {
                 int max = GetNumber(resultRequestMessage);
                 var resultListData = _productService.GetByUnitsInStock((decimal)max, (decimal)100).Data;
@@ -70,7 +70,7 @@ namespace CatchRequestFromMail
                 //string json = JsonConvert.SerializeObject(resultListData, Formatting.Indented);
                 return dataResult;
             }
-            else if (resultRequest == Constants.GetAllProductDto)
+            else if (resultRequest == ConstantsRequests.GetAllProductDto)
             {
                 int max = GetNumber(resultRequestMessage);
                 var resultListData = _productService.GetPrnoductDetails().Data;
@@ -82,7 +82,7 @@ namespace CatchRequestFromMail
                 //string json = JsonConvert.SerializeObject(resultListData, Formatting.Indented);
                 return dataResult;
             }
-            else if (resultRequest == Constants.GetAllProductDetailById)
+            else if (resultRequest == ConstantsRequests.GetAllProductDetailById)
             {
                 int id = GetNumber(resultRequestMessage);
                 var resultListData = _productService.GetById(id).Data;

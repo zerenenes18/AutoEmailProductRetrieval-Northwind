@@ -7,11 +7,11 @@ namespace CatchRequestFromMail
 {
     public class MailBodyFilter
     {
-        string[] models = new string[] { Constants.GetUnderMinCountProducts,
-                                         Constants.GetOverTheCountProducts,
-                                         Constants.GetAllProductDto,
-                                         Constants.GetAllProductDetailById,
-                                         Constants.GetAllProductByCategoryId};
+        string[] models = new string[] { ConstantsRequests.GetUnderMinCountProducts,
+                                         ConstantsRequests.GetOverTheCountProducts,
+                                         ConstantsRequests.GetAllProductDto,
+                                         ConstantsRequests.GetAllProductDetailById,
+                                         ConstantsRequests.GetAllProductByCategoryId};
 
 
         GetEmail getEmail = new GetEmail();
